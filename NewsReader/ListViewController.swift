@@ -17,6 +17,9 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        cell.textLabel!.text = "記事タイトル"
+        tableView.deleteRows(at: [indexPath], with: .automatic) // 記事を削除する
+        
         return cell
     } // 表示するセルを作成する
 }
