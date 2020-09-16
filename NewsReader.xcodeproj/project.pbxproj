@@ -13,6 +13,7 @@
 		0EDC42B7250614D3003F321A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC42B6250614D3003F321A /* Assets.xcassets */; };
 		0EDC42BA250614D3003F321A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC42B8250614D3003F321A /* LaunchScreen.storyboard */; };
 		0EDC42C2250616FD003F321A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC42C1250616FD003F321A /* ListViewController.swift */; };
+		0EDC42C4250CF400003F321A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC42C3250CF400003F321A /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0EDC42B9250614D3003F321A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EDC42BB250614D3003F321A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDC42C1250616FD003F321A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		0EDC42C3250CF400003F321A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0EDC42AF250614D0003F321A /* SceneDelegate.swift */,
 				0EDC42B3250614D0003F321A /* Main.storyboard */,
 				0EDC42C1250616FD003F321A /* ListViewController.swift */,
+				0EDC42C3250CF400003F321A /* Item.swift */,
 				0EDC42B6250614D3003F321A /* Assets.xcassets */,
 				0EDC42B8250614D3003F321A /* LaunchScreen.storyboard */,
 				0EDC42BB250614D3003F321A /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDC42C4250CF400003F321A /* Item.swift in Sources */,
 				0EDC42AE250614D0003F321A /* AppDelegate.swift in Sources */,
 				0EDC42B0250614D0003F321A /* SceneDelegate.swift in Sources */,
 				0EDC42C2250616FD003F321A /* ListViewController.swift in Sources */,
