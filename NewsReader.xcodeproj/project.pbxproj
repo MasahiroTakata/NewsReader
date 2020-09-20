@@ -14,6 +14,8 @@
 		0EDC42BA250614D3003F321A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC42B8250614D3003F321A /* LaunchScreen.storyboard */; };
 		0EDC42C2250616FD003F321A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC42C1250616FD003F321A /* ListViewController.swift */; };
 		0EDC42C4250CF400003F321A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC42C3250CF400003F321A /* Item.swift */; };
+		0EDC42C725139069003F321A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDC42C625139069003F321A /* WebKit.framework */; };
+		0EDC42CB25175EE7003F321A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC42CA25175EE7003F321A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0EDC42BB250614D3003F321A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDC42C1250616FD003F321A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0EDC42C3250CF400003F321A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0EDC42C625139069003F321A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0EDC42CA25175EE7003F321A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDC42C725139069003F321A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 			children = (
 				0EDC42AC250614D0003F321A /* NewsReader */,
 				0EDC42AB250614D0003F321A /* Products */,
+				0EDC42C525139069003F321A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +64,7 @@
 		0EDC42AC250614D0003F321A /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC42CA25175EE7003F321A /* DetailViewController.swift */,
 				0EDC42AD250614D0003F321A /* AppDelegate.swift */,
 				0EDC42AF250614D0003F321A /* SceneDelegate.swift */,
 				0EDC42B3250614D0003F321A /* Main.storyboard */,
@@ -68,6 +75,14 @@
 				0EDC42BB250614D3003F321A /* Info.plist */,
 			);
 			path = NewsReader;
+			sourceTree = "<group>";
+		};
+		0EDC42C525139069003F321A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC42C625139069003F321A /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +158,7 @@
 			files = (
 				0EDC42C4250CF400003F321A /* Item.swift in Sources */,
 				0EDC42AE250614D0003F321A /* AppDelegate.swift in Sources */,
+				0EDC42CB25175EE7003F321A /* DetailViewController.swift in Sources */,
 				0EDC42B0250614D0003F321A /* SceneDelegate.swift in Sources */,
 				0EDC42C2250616FD003F321A /* ListViewController.swift in Sources */,
 			);

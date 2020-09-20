@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="69U-J1-dbb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Za-qu-Uh1">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--一覧-->
         <scene sceneID="DpB-5c-6Mg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ush-X1-ht6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="69U-J1-dbb" customClass="ListViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="44f-Jm-Gx1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -22,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qd-ti-qEk">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="記事タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qd-ti-qEk">
                                             <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zoa-bL-oq7" kind="show" id="FXh-mI-Uui"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,10 +43,63 @@
                             <outlet property="delegate" destination="69U-J1-dbb" id="sgH-wR-BSJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="一覧" id="bPH-ox-opt"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ush-X1-ht6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="-96"/>
+            <point key="canvasLocation" x="918.84057971014499" y="-96.428571428571431"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="VJN-9L-a48">
+            <objects>
+                <viewController id="zoa-bL-oq7" customClass="DetailViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBb-UH-kgR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-LL-sEb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VU9-LL-sEb" firstAttribute="top" secondItem="LBb-UH-kgR" secondAttribute="topMargin" constant="-88" id="N4g-qJ-7An"/>
+                            <constraint firstItem="VU9-LL-sEb" firstAttribute="leading" secondItem="AOF-sS-hJr" secondAttribute="leading" id="QI6-4X-rs8"/>
+                            <constraint firstItem="VU9-LL-sEb" firstAttribute="centerY" secondItem="LBb-UH-kgR" secondAttribute="centerY" id="tdx-64-fPI"/>
+                            <constraint firstItem="VU9-LL-sEb" firstAttribute="centerX" secondItem="LBb-UH-kgR" secondAttribute="centerX" id="ydx-tQ-FM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AOF-sS-hJr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HFt-ee-IL7"/>
+                    <connections>
+                        <outlet property="webView" destination="VU9-LL-sEb" id="W9l-DQ-Ny4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dll-si-gn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="-96.428571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wuG-p3-qSv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Za-qu-Uh1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zAx-qV-RlH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="69U-J1-dbb" kind="relationship" relationship="rootViewController" id="Whp-0h-Z8M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3x-q4-erc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="-96.428571428571431"/>
         </scene>
     </scenes>
 </document>
